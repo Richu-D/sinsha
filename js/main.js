@@ -215,7 +215,7 @@ function initWishes() {
     loadWishes();
 
     if (wishForm) {
-        const scriptURL = "https://script.google.com/macros/s/AKfycbxXOfCk7V1VCJS-1UXJp4CCfuGhihwrqD7QmWJE_GejROBinf197TiPpdwd8euawo0U/exec"; // paste the web app URL here
+        const scriptURL = "https://script.google.com/macros/s/AKfycbw1jlTXg3Y9GVB496o0J2f4X31LV0tSV-shzoteVh5q2odSKmQzIxDTM3Um0B9FaSPV/exec"; // paste the web app URL here
 
         wishForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -239,8 +239,8 @@ function initWishes() {
             try {
                 await fetch(scriptURL, {
                     method: "POST",
-                    body: JSON.stringify(data),
-                    headers: { "Content-Type": "application/json" },
+                    body: (`name=${data.name}&phone=${data.phone}&wish=${data.wish}`),
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 });
 
                 const msgElement = document.getElementById("msg");
