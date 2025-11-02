@@ -215,7 +215,7 @@ function initWishes() {
     loadWishes();
 
     if (wishForm) {
-        const scriptURL = "https://script.google.com/macros/s/AKfycbwvmUAJqaR-sjAco_k8keq0IAKBT4fhiXBdrKNR64Rv8F0pF_lHgsfzQC2ocEnU1ulj/exec"; // paste the web app URL here
+        const scriptURL = "https://script.google.com/macros/s/AKfycbxXOfCk7V1VCJS-1UXJp4CCfuGhihwrqD7QmWJE_GejROBinf197TiPpdwd8euawo0U/exec"; // paste the web app URL here
 
         wishForm.addEventListener('submit', async (e) => {
             e.preventDefault();
