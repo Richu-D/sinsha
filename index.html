@@ -2,10 +2,409 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Sinsha Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Birthday portfolio website for Sinsha - MBBS student in Russia">
+    <title>Happy Birthday Sinsha! 🎂</title>
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2/dist/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Sinsha</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#timeline" class="nav-link">Journey</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#wishes" class="nav-link">Wishes</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-avatar">
+                    <img src="assets/img/sinsha_profile.jpg" alt="Sinsha" class="avatar-img" id="avatarImg">
+                </div>
+                <h1 id="birthdayText" class="hero-title">Happy Birthday, <span class="highlight">Sinsha!</span> 🎉</h1>
+                <p class="hero-subtitle" id="typedText"></p>
+            </div>
+        </div>
+        <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">MBBS Journey</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">A timeline of your incredible journey</p>
+
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-content">
+                        <h3>The Beginning</h3>
+                        <p>Started your journey to become a doctor — a dream fueled by determination, passion, and purpose.</p>
+                    </div>
+                </div>
+            
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-year">2021</div>
+                    <div class="timeline-content">
+                        <h3>First Steps in Russia</h3>
+                        <p>Embraced a new culture, a new language, and adjusted to the demanding life of a medical student in Russia.</p>
+                    </div>
+                </div>
+            
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-content">
+                        <h3>Academic Excellence</h3>
+                        <p>Built a strong foundation in anatomy, physiology, and pathology — showing dedication and brilliance in every step.</p>
+                    </div>
+                </div>
+            
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">
+                        <h3>Clinical Rotations</h3>
+                        <p>Stepped into the real world of medicine, caring for patients and turning knowledge into healing practice.</p>
+                    </div>
+                </div>
+            
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h3>Continuous Growth</h3>
+                        <p>Kept learning, evolving, and proving that medicine is not just a career — it’s a calling.</p>
+                    </div>
+                </div>
+            
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h3>The Future Awaits</h3>
+                        <p>As graduation approaches, your hard work, compassion, and resilience shine brighter than ever — the world is ready for Dr. <em>Sinsha</em>.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Memories</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Captured moments of your journey</p>
+            
+            <div class="gallery-wrapper">
+                <div class="gallery-grid">
+                    <div class="gallery-item gallery-item-large" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="photo-frame">
+                                        <div class="frame-border frame-border-top"></div>
+                                        <div class="frame-border frame-border-right"></div>
+                                        <div class="frame-border frame-border-bottom"></div>
+                                        <div class="frame-border frame-border-left"></div>
+                                        <div class="frame-corner frame-corner-tl">✦</div>
+                                        <div class="frame-corner frame-corner-tr">✦</div>
+                                        <div class="frame-corner frame-corner-bl">✦</div>
+                                        <div class="frame-corner frame-corner-br">✦</div>
+                                        <img src="assets/img/sinsha12.jpeg" alt="Memory 1" loading="lazy" class="framed-img">
+                                        <div class="frame-shine"></div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="card-back-content">
+                                        <div class="card-icon">💖</div>
+                                        <h3 class="card-title">Beautiful Moments</h3>
+                                        <p class="card-message">"Every moment with you is a treasure. May your journey be filled with endless joy, success, and beautiful memories!"</p>
+                                        <div class="card-signature">— With Love ❤️</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame-label">Precious Memory</div>
+                    </div>
+                    
+                    <div class="gallery-item gallery-item-medium" data-aos="fade-up" data-aos-delay="150">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="photo-frame">
+                                        <div class="frame-border frame-border-top"></div>
+                                        <div class="frame-border frame-border-right"></div>
+                                        <div class="frame-border frame-border-bottom"></div>
+                                        <div class="frame-border frame-border-left"></div>
+                                        <div class="frame-corner frame-corner-tl">✦</div>
+                                        <div class="frame-corner frame-corner-tr">✦</div>
+                                        <div class="frame-corner frame-corner-bl">✦</div>
+                                        <div class="frame-corner frame-corner-br">✦</div>
+                                        <img src="assets/img/sinsha13.jpeg" alt="Memory 2" loading="lazy" class="framed-img">
+                                        <div class="frame-shine"></div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="card-back-content">
+                                        <div class="card-icon">🎂</div>
+                                        <h3 class="card-title">Birthday Wishes</h3>
+                                        <p class="card-message">"On this special day, may all your dreams come true. Keep shining bright and inspiring everyone around you!"</p>
+                                        <div class="card-signature">— Happy Birthday 🎉</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame-label">Cherished Times</div>
+                    </div>
+                    
+                    <div class="gallery-item gallery-item-small" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="photo-frame">
+                                        <div class="frame-border frame-border-top"></div>
+                                        <div class="frame-border frame-border-right"></div>
+                                        <div class="frame-border frame-border-bottom"></div>
+                                        <div class="frame-border frame-border-left"></div>
+                                        <div class="frame-corner frame-corner-tl">✦</div>
+                                        <div class="frame-corner frame-corner-tr">✦</div>
+                                        <div class="frame-corner frame-corner-bl">✦</div>
+                                        <div class="frame-corner frame-corner-br">✦</div>
+                                        <img src="assets/img/sinsha9.jpeg" alt="Memory 3" loading="lazy" class="framed-img">
+                                        <div class="frame-shine"></div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="card-back-content">
+                                        <div class="card-icon">✨</div>
+                                        <h3 class="card-title">You Are Amazing</h3>
+                                        <p class="card-message">"Your dedication to medicine and your caring heart make you truly special. The world needs more people like you!"</p>
+                                        <div class="card-signature">— Keep Inspiring ⭐</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame-label">Special Day</div>
+                    </div>
+                    
+                    <div class="gallery-item gallery-item-medium" data-aos="fade-up" data-aos-delay="250">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="photo-frame">
+                                        <div class="frame-border frame-border-top"></div>
+                                        <div class="frame-border frame-border-right"></div>
+                                        <div class="frame-border frame-border-bottom"></div>
+                                        <div class="frame-border frame-border-left"></div>
+                                        <div class="frame-corner frame-corner-tl">✦</div>
+                                        <div class="frame-corner frame-corner-tr">✦</div>
+                                        <div class="frame-corner frame-corner-bl">✦</div>
+                                        <div class="frame-corner frame-corner-br">✦</div>
+                                        <img src="assets/img/sinsha11.jpeg" alt="Memory 4" loading="lazy" class="framed-img">
+                                        <div class="frame-shine"></div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="card-back-content">
+                                        <div class="card-icon">🌟</div>
+                                        <h3 class="card-title">Bright Future</h3>
+                                        <p class="card-message">"As you continue your medical journey, remember that every challenge makes you stronger. Your future is incredibly bright!"</p>
+                                        <div class="card-signature">— Stay Strong 💪</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame-label">Wonderful Journey</div>
+                    </div>
+                    
+                    <div class="gallery-item gallery-item-small" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="photo-frame">
+                                        <div class="frame-border frame-border-top"></div>
+                                        <div class="frame-border frame-border-right"></div>
+                                        <div class="frame-border frame-border-bottom"></div>
+                                        <div class="frame-border frame-border-left"></div>
+                                        <div class="frame-corner frame-corner-tl">✦</div>
+                                        <div class="frame-corner frame-corner-tr">✦</div>
+                                        <div class="frame-corner frame-corner-bl">✦</div>
+                                        <div class="frame-corner frame-corner-br">✦</div>
+                                        <img src="assets/img/sinsha10.jpeg" alt="Memory 5" loading="lazy" class="framed-img">
+                                        <div class="frame-shine"></div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="card-back-content">
+                                        <div class="card-icon">💐</div>
+                                        <h3 class="card-title">Endless Happiness</h3>
+                                        <p class="card-message">"May your life be filled with laughter, love, and countless beautiful moments. You deserve all the happiness in the world!"</p>
+                                        <div class="card-signature">— Forever Blessed 🌸</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame-label">Sweet Memories</div>
+                    </div>
+                    
+                    <div class="gallery-item gallery-item-large" data-aos="fade-up" data-aos-delay="350">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="photo-frame">
+                                        <div class="frame-border frame-border-top"></div>
+                                        <div class="frame-border frame-border-right"></div>
+                                        <div class="frame-border frame-border-bottom"></div>
+                                        <div class="frame-border frame-border-left"></div>
+                                        <div class="frame-corner frame-corner-tl">✦</div>
+                                        <div class="frame-corner frame-corner-tr">✦</div>
+                                        <div class="frame-corner frame-corner-bl">✦</div>
+                                        <div class="frame-corner frame-corner-br">✦</div>
+                                        <img src="assets/img/sinsha7.jpeg" alt="Memory 6" loading="lazy" class="framed-img">
+                                        <div class="frame-shine"></div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="card-back-content">
+                                        <div class="card-icon">🎁</div>
+                                        <h3 class="card-title">Special Birthday</h3>
+                                        <p class="card-message">"Another year older, wiser, and more amazing! May this birthday bring you closer to all your dreams. You're going to make an incredible doctor!"</p>
+                                        <div class="card-signature">— With Admiration 🙏</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame-label">Precious Moments</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wishes Section -->
+    <section class="wishes-section" id="wishes">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Birthday Wishes</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Share your wishes for Sinsha</p>
+            
+            <form class="wish-form" id="wishForm" data-aos="fade-up" data-aos-delay="200">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Your name" required aria-label="Your name">
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" placeholder="Your phone number" required aria-label="Your phone number">
+                </div>
+                <div class="form-group">
+                    <textarea id="wish" placeholder="Write your birthday wish..." rows="4" required aria-label="Your birthday wish"></textarea>
+                </div>
+                <button type="submit" class="btn btn-secondary">Send Wish ✨</button>
+                <div id="msg" class="form-message"></div>
+            </form>
+            
+            <div class="wishes-grid" id="wishesGrid">
+                <!-- Wishes will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h2 class="section-title">About Sinsha</h2>
+                    <p>Passionate MBBS student studying in Russia, dedicated to making a difference in healthcare. With a heart full of compassion and a mind eager to learn, Sinsha is on an incredible journey to become an exceptional doctor.</p>
+                    
+                    <div class="fun-facts">
+                        <div class="fact-item" data-aos="fade-up" data-aos-delay="100">
+                            <span class="fact-icon">🌍</span>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Russia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="fact-item" data-aos="fade-up" data-aos-delay="200">
+                            <span class="fact-icon">🎓</span>
+                            <div>
+                                <h4>Education</h4>
+                                <p>MBBS Student</p>
+                            </div>
+                        </div>
+                        
+                        <div class="fact-item" data-aos="fade-up" data-aos-delay="300">
+                            <span class="fact-icon">💖</span>
+                            <div>
+                                <h4>Passion</h4>
+                                <p>Medicine & Healing</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="my-wish" data-aos="fade-up" data-aos-delay="400">
+                        <h4>A Birthday Wish from Dev</h4>
+                        <div class="wish-content">
+                            <div class="wish-message">
+                                <p>Happy Birthday, Sinsha! 🎉🎂 On this special day, I want you to know how amazing you are. As you continue your incredible journey in medicine, may you achieve all your dreams and bring healing to countless lives. You've always been an inspiration with your dedication, compassion, and determination. Wishing you endless joy, success, and wonderful memories today and always. Keep shining bright! ✨</p>
+                            </div>
+                            <div class="wish-author">
+                                <h5>Richu D</h5>
+                                <p class="wish-role">Software Engineer II</p>
+                                <a href="https://www.richu.in" target="_blank" rel="noopener noreferrer" class="wish-website">www.richu.in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image" data-aos="fade-right">
+                    <img src="assets/img/sinsha_image.jpeg" alt="Sinsha" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Made with ❤️ and countless memories for my best friend, Sinsha</p>
+            <p class="footer-copyright">&copy; 2025 Wishing you the happiest birthday ever! 🎂✨</p>
+        </div>
+    </footer>
     
+
+    <!-- Floating Music Player Button -->
+    <button class="floating-music-btn" id="floatingPlayBtn" aria-label="Play/Pause music">
+        <span id="floatingPlayIcon">▶️</span>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2/dist/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

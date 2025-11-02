@@ -1,0 +1,21 @@
+{
+  "name": "sinsha",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:js": "terser js/main.js -o dist/js/main.min.js --compress --mangle",
+    "build:css": "postcss css/main.css --use cssnano -o dist/css/main.min.css",
+    "build:html": "html-minifier-terser --collapse-whitespace --remove-comments --minify-js true -o dist/index.html index.html",
+    "build": "npm run build:js && npm run build:css && npm run build:html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cssnano": "^7.1.2",
+    "html-minifier-terser": "^7.2.0",
+    "postcss-cli": "^11.0.1",
+    "terser": "^5.44.0"
+  }
+}
